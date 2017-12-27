@@ -242,3 +242,11 @@
 
        5.使用：
        WalleChannelReader.getChannel(this.getApplicationContext());
+
+       6.生成渠道包
+            在Android studio 的命令行中输入（确保在项目目录下）
+            gradlew clean assembleReleaseChannels
+            当执行上面命令后，就会生成配置文件中对应的apk文件了，但是有个问题
+            此时打开项目中的类会报错，找不到 R 文件，重新构建一下就好了
+            同时，也可以使用一下命令：
+            gradlew assembleReleaseChannels
